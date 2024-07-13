@@ -4,14 +4,16 @@
     <head>
         <meta lang="ru">
         <meta charset="utf-8">
-        <title>Кофейня - Отзывы</title>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="../static/404.css">
         <link rel="stylesheet" href="../static/comments.css">
-        <style>
-            .comm { background-image: url("{{ url_for('static',filename='images/menu_top_panel.png') }}") }
-            .top_panel { background-image: url("{{ url_for('static',filename='images/top_panel.png') }}") }
-            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display:wght@400;500&display=swap');
-        </style>
+        <link rel="stylesheet" href="../static/delivery.css">
+        <link rel="stylesheet" href="../static/menu.css">
+        <link rel="stylesheet" href="../static/partners.css">
+        <link rel="stylesheet" href="../static/sale.css">
+        <link rel="stylesheet" href="../static/vacancy.css">
+        {% block style %}{% endblock %}
     </head>
 </head>
 <body>
@@ -24,7 +26,10 @@
             <a href="/vacancy" class="top_panel_button" id="vacancy">Вакансии</a>
             <a href="/partners" class="top_panel_button" id="partners">Для партнёров</a>
         </div>
-{% block scripts %}{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
 {% block content %}
 {% endblock %}
 
@@ -52,7 +57,6 @@
                         </div>
                     </div>
                 </div>
-                <p class='footer_h'>Этот сайт является учебным проектом и не представляет собой реальную компанию. Сайт разработан Вечкановой Полиной. Все изображения и тексты используются исключительно в образовательных целях. Контакты для связи: vechkanova.p@gmail.com</p>
             </footer>
         </div>
     </body>

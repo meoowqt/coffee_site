@@ -2,34 +2,62 @@ from flask import Flask, render_template, request, flash, redirect
 
 app = Flask(__name__)
 
-if __name__ == "__main__":
-    app.run(debug=True)
-
 
 @app.route("/")
 def index():
-    return render_template("coffee_site/index.html")
+    context = {
+        "title": "Главная страница",
+    }
+    return render_template("coffee_site/index.html", context=context)
 
-@app.route('/comments')
+
+@app.route("/comments")
 def comments():
-    return render_template('coffee_site/comments.html')
+    context = {
+        "title": "Отзывы",
+    }
+    return render_template("coffee_site/comments.html")
 
-@app.route('/delivery')
+
+@app.route("/delivery")
 def delivery():
-    return render_template('coffee_site/delivery.html')
+    context = {
+        "title": "Доставка",
+    }
+    return render_template("coffee_site/delivery.html")
 
-@app.route('/menu')
+
+@app.route("/menu")
 def menu():
-    return render_template('coffee_site/menu.html')
+    context = {
+        "title": "Меню - Каталог",
+    }
+    return render_template("coffee_site/menu.html")
 
-@app.route('/vacancy')
+
+@app.route("/vacancy")
 def vacancy():
-    return render_template('coffee_site/vacancy.html')
+    context = {
+        "title": "Вакансии",
+    }
+    return render_template("coffee_site/vacancy.html")
 
-@app.route('/sale')
+
+@app.route("/sale")
 def sale():
-    return render_template('coffee_site/sale.html')
+    context = {
+        "title": "Акции и скидки",
+    }
+    return render_template("coffee_site/sale.html")
 
-@app.route('/partners')
+
+@app.route("/partners")
 def partners():
-    return render_template('coffee_site/partners.html')
+    context = {
+        "title": "Партнерам",
+    }
+    return render_template("coffee_site/partners.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

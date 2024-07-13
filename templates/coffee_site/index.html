@@ -1,6 +1,13 @@
 
- {% extends "base.html" %}
- {% block scripts %}
+{% extends "coffee_site/base.html" %}
+{% block scripts %}
+<link rel="stylesheet" href="../static/style.css">
+        <style>
+            .big_picture { background-image: url("{{ url_for('static',filename='images/MainPicture.png') }}") }
+            .map_container { background-image: url("{{ url_for('static',filename='images/map.png') }}") }
+            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display:wght@400;500&display=swap');
+        </style>
         <script type="text/javascript">
         $(function(){
         $('.minimized').click(function(event) {
