@@ -1,25 +1,19 @@
 .big_picture {
     position: relative;
     top: 0;
-    left: inherit;
-    width: 1920px;
-    height: 1080px;
+    width: 1550px;
+    height: 700px;
 
     display: flex;
 
-    background-image: url(vacancu_bg.png);
+    background-image: url(images/vacancu_bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .white_rect {
-    position: relative;
-    height: 546px;
-    width: 100%;
-
-    margin-top: auto;
-    margin-bottom: auto;
-
+    height: 510px;
+    width: 1200px;
     display: flex;
     flex-direction: row;
 
@@ -28,9 +22,9 @@
 
 .wr_pics {
     position: relative;
-    width: 456px;
+    width: 450px;
     height: 620px;
-    margin: -35px auto auto auto;
+    margin: -35px 25px auto auto;
     display: flex;
     flex-direction: column;
 
@@ -52,8 +46,8 @@
 }
 
 .wr_text_container {
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+
     display: flex;
     flex-direction: column;
 }
