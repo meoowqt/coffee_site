@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+        <div class="temp"></div>
+        <form method="post">
+            <h1 class="form_text_h">Оставить отзыв</h1>
+            <h2 class="form_text">Как вас зовут?</h2>
+            <input type="text" name="name" class="input_1" maxlength="50">
+            <h2 class="form_text">Любые комментарии и пожелания</h2>
+            <input type="text" name="text" class="input_2" maxlength="300">
+            <button type="submit" class="form_button">Отправить</button>
+            {% for msg in get_flashed_messages() %}
+                <p class="flash">{{ msg }}</p>
+            {% endfor %}
+        </form>
+        <div class="temp"></div>
+        <div class="comms_section">
+            {% for comm in comms %}
+                <div class="comm">
+                    <figure class="comm_fig">
+                        <p class="comm_text">{{ comm.comment_text }}</p>
+                        <div class="comm_user">
+                            <img src="../static/images/userpic.png" alt="" class="comm_user_pic">
+                            <p class="comm_user_name">{{ comm.commentator_name }}</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="temp"></div>
+            {% endfor %}
+        </div>
+        <div class="temp"></div>
+{% endblock %}
