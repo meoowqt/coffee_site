@@ -1,13 +1,12 @@
 .big_picture {
     position: relative;
     top: 0;
-    left: inherit;
-    width: 1920px;
-    height: 1080px;
+    width: 1550px;
+    height: 700px;
 
     display: flex;
 
-    background-image: url(galery3.png);
+    background-image: url(images/galery3.png);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -15,22 +14,18 @@
 .white_rect {
     position: relative;
     height: 504px;
-    width: 100%;
-
-    margin-top: auto;
-    margin-bottom: auto;
-
+    width: 1000px;
+    
     display: flex;
     flex-direction: column;
-
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    
     background-color: #FFFFFF;
 }
 
 .wr_h {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
+    margin: 0; /* Remove all margins */
 
     font-family: 'Cormorant Garamond';
     font-style: normal;
@@ -45,11 +40,7 @@
 }
 
 .wr_text {
-    position: relative;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    margin: 50px 0 0 0; /* Top margin of 50px, remove others */
 
     font-family: 'Playfair Display';
     font-style: normal;
@@ -62,6 +53,7 @@
 
     color: #000000;
 }
+
 
 .brown_rect {
     position: relative;
@@ -94,7 +86,7 @@
 
 .br_text {
     position: relative;
-    width: 1313px;
+    width: 1200px;
     margin: 0 auto auto auto;
 
     font-family: 'Playfair Display';

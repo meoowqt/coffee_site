@@ -2,20 +2,43 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #1E1E1E;
+    width: 100%;
+    height: 100%;
 }
 
 .main_window {
     background-color: white;
-    width: 1920px;
+    width: 1550px;
+}
+
+.temp {
+    position: relative;
+    width: inherit;
+    height: 100px;
+    background-color: white;
+}
+
+.logo {
+    position: relative;
+    width: 158px;
+    height: 30px;
+}
+
+.logo_ref {
+    position: relative;
+    top: 20px;
+    left: calc(158px/2);
+
+    width: 158px;
+    height: 30px;
 }
 
 .top_panel {
     position: fixed;
     height: 70px;
     display: flex;
-    width: 1920px;
+    width: 1550px;
     background-color: rgba(1, 1, 1, 0.6);
-
     z-index: 9999999;
 }
 
@@ -29,7 +52,7 @@ html, body {
     font-size: 20px;
     text-decoration: none;
 
-    line-height: 27px;
+    line-height: 10px;
 
     text-align: center;
 
@@ -38,42 +61,41 @@ html, body {
 
 #menu {
     position: relative;
-    left: 55%;
+    left: 40%;
 }
 
 #sale {
     position: relative;
-    left: 60%;
+    left: 45%;
 }
 
 #comments {
     position: relative;
-    left: 65%;
+    left: 50%;
 }
 
 #vacancy {
     position: relative;
-    left: 70%;
+    left: 55%;
 }
 
 #partners {
     position: relative;
-    left: 75%;
+    left: 60%;
 }
 
 .big_picture {
     position: relative;
     top: 0;
     left: inherit;
-    width: 1920px;
-    height: 1080px;
+    height: 700px;
 
     background-image: url('/images/MainPicture.png');
 }
 
 .bp_darker {
     position: inherit;
-    width: 1920px;
+    width: 1550px;
     height: inherit;
     margin: 0;
     background-color: rgba(1, 1, 1, 0.6);
@@ -81,7 +103,7 @@ html, body {
 
 .bp_text {
     position: relative;
-    top: 740px;
+    top: 500px;
     padding-left: 250px;
     margin: 0;
 
@@ -98,7 +120,7 @@ html, body {
 
 .temp {
     position: relative;
-    width: 1920px;
+    width: 1550px;
     height: 100px;
     background-color: white;
 }
@@ -107,7 +129,6 @@ html, body {
     position: relative;
     left: inherit;
     height: 570px;
-    width: inherit;
     margin: 0;
     padding: 0;
 
@@ -119,7 +140,7 @@ html, body {
 
 .about_text_container {
     position: relative;
-    width: 1000px;
+    width: 700px;
     margin-left: auto;
 
     display: flex;
@@ -556,7 +577,7 @@ html, body {
 footer {
     position: relative;
     height: 400px;
-    width: inherit;
+    width: 1550px;
     display: flex;
 
     background-color: #1E1E1E;
@@ -580,7 +601,7 @@ footer {
 
 .contacts {
     position: relative;
-    padding-left: 900px;
+    padding-left: 500px;
     padding-top: 100px;
 
     display: flex;

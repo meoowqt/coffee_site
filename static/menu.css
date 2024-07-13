@@ -62,6 +62,9 @@
 
 .cad_table {
     padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .cad_cell {
@@ -126,77 +129,6 @@
     text-align: center;
 
     /* white */
-
-    color: #FFFFFF;
-}
-
-
-
-
-footer {
-    position: relative;
-    height: 400px;
-    width: inherit;
-    display: flex;
-
-    background-color: #1E1E1E;
-}
-
-.footer_h {
-    position: relative;
-    padding-left: 200px;
-    padding-top: 100px;
-    margin: 0;
-
-    font-family: 'Cormorant Garamond';
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 48px;
-    letter-spacing: 0px;
-    text-align: left;
-
-    color: #FFFFFF;
-}
-
-.contacts {
-    position: relative;
-    padding-left: 900px;
-    padding-top: 100px;
-
-    display: flex;
-}
-
-.contacts_left {
-    position: relative;
-    margin: 10px;
-}
-
-.contacts_right {
-    position: relative;
-    margin: 10px;
-}
-
-.contacts_1 {
-    display: flex;
-}
-
-.con_img {
-    width: 20px;
-    height: 18px;
-    margin: 10px;
-}
-
-.con_text {
-    margin: 0;
-
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 40px;
-    /* identical to box height, or 182% */
-
-    font-feature-settings: 'tnum' on, 'lnum' on;
 
     color: #FFFFFF;
 }
