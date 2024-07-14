@@ -11,9 +11,7 @@
             <h2 class="form_text">Любые комментарии и пожелания</h2>
             <input type="text" name="text" class="input_2" maxlength="300">
             <button type="submit" class="form_button">Отправить</button>
-            {% for msg in get_flashed_messages() %}
-                <p class="flash">{{ msg }}</p>
-            {% endfor %}
+
         </form>
         <div class="temp"></div>
         <div class="comms_section">

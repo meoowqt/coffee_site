@@ -44,14 +44,14 @@ def comments():
     context = {
         "title": "Отзывы",
     }
-    if request.method == ["POST"]:
+    if request.method == "POST":
         name = request.form["name"]
         text = request.form["text"]
         comm = Comment(_text=text, _name=name)
         db.session.add(comm)
         db.session.commit()
     comms = Comment.query.order_by(desc(Comment.comment_id)).all()
-    return render_template("coffee_site/comments.html", context=context)
+    return render_template("coffee_site/comments.html", context=context, comms=comms)
 
 
 @app.route("/delivery")
