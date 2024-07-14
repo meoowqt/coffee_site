@@ -26,9 +26,11 @@ class Comment(db.Model):
         self.commentator_name = _name
         self.comment_text = _text
 
+
 with app.app_context():
     db.create_all()
-    
+
+
 @app.route("/")
 def index():
     context = {
@@ -37,14 +39,14 @@ def index():
     return render_template("coffee_site/index.html", context=context)
 
 
-@app.route("/comments", methods=['POST', 'GET'])
+@app.route("/comments", methods=["POST", "GET"])
 def comments():
     context = {
         "title": "Отзывы",
     }
-    if request.method == ['POST']:
-        name = request.form['name']
-        text = request.form['text']
+    if request.method == ["POST"]:
+        name = request.form["name"]
+        text = request.form["text"]
         comm = Comment(_text=text, _name=name)
         db.session.add(comm)
         db.session.commit()
