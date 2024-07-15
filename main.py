@@ -94,5 +94,21 @@ def partners():
     return render_template("coffee_site/partners.html", context=context)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    context = {
+        "title": "Страница не найдена",
+    }
+    return render_template("coffee_site/404.html", context=context), 404
+
+
+@app.errorhandler(505)
+def page_server_error(e):
+    context = {
+        "title": "Ошибка на стороне сервера",
+    }
+    return render_template("coffee_site/404.html", context=context), 505
+
+
 if __name__ == "__main__":
     app.run(debug=True)

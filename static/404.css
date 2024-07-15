@@ -4,20 +4,11 @@ html, body {
     background-color: #1E1E1E;
 }
 
-.main_window {
-    position: relative;
-    height: 6200px;
-    width: 1920px;
-    left: calc(50% - 1920px/2);
-
-    background-color: white;
-}
-
 .picture {
     position: relative;
     top: 0;
     left: inherit;
-    width: 1920px;
+    width: 1550px;
     height: 1080px;
 
     background-image: url('/images/MainPicture.png');
