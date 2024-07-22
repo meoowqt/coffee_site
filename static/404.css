@@ -1,12 +1,3 @@
-.pictu {
-    position: relative;
-    top: 0;
-    left: inherit;
-    height: 700px;
-
-    background-image: url('/images/MainPicture.png');
-}
-
 .bp_darker {
     position: inherit;
     width: inherit;

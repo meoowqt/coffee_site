@@ -11,12 +11,6 @@ html, body {
     width: 1550px;
 }
 
-.temp {
-    position: relative;
-    width: inherit;
-    height: 100px;
-    background-color: white;
-}
 
 .logo {
     position: relative;

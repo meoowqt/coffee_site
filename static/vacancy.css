@@ -2,7 +2,7 @@
     position: relative;
     top: 0;
     width: 1550px;
-    height: 700px;
+    height: 1000px;
 
     display: flex;
 
@@ -11,11 +11,12 @@
     background-size: 100%;
 }
 
-.white_rect {
-    height: 510px;
-    width: 1200px;
+.white_rects {
+    height: 546px;
+    width: 1550px;
     display: flex;
     flex-direction: row;
+    margin: 200px auto auto auto;
 
     background-color: #FFFFFF;
 }
@@ -24,7 +25,7 @@
     position: relative;
     width: 450px;
     height: 620px;
-    margin: -35px 25px auto auto;
+    margin: -35px auto auto auto;
     display: flex;
     flex-direction: column;
 
@@ -47,11 +48,10 @@
 
 .wr_text_container {
     position: relative;
-
     display: flex;
     flex-direction: column;
+    margin: 40px auto 50px auto;
 }
-
 .wr_h {
     position: relative;
     margin: 50px auto 50px auto;

@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request, flash, redirect
-from sqlalchemy import desc
 from flask_sqlalchemy import SQLAlchemy
-
+from sqlalchemy import desc
+import os
 
 app = Flask(__name__)
+app.secret_key = "your_secret_key"
 
-app.config["SQLALCHEMY_DATABASE_URI"] = (
-    "postgresql://postgres:1234@localhost:5432/postgres"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
+    "DATABASE_URL", "postgresql://postgres:1234@localhost:5432/postgres"
 )
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
@@ -27,23 +28,18 @@ class Comment(db.Model):
         self.comment_text = _text
 
 
-with app.app_context():
-    db.create_all()
+
 
 
 @app.route("/")
 def index():
-    context = {
-        "title": "Главная страница",
-    }
+    context = {"title": "Главная страница"}
     return render_template("coffee_site/index.html", context=context)
 
 
 @app.route("/comments", methods=["POST", "GET"])
 def comments():
-    context = {
-        "title": "Отзывы",
-    }
+    context = {"title": "Отзывы"}
     if request.method == "POST":
         name = request.form["name"]
         text = request.form["text"]
@@ -96,18 +92,14 @@ def partners():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    context = {
-        "title": "Страница не найдена",
-    }
+    context = {"title": "Страница не найдена"}
     return render_template("coffee_site/404.html", context=context), 404
 
 
-@app.errorhandler(505)
+@app.errorhandler(500)
 def page_server_error(e):
-    context = {
-        "title": "Ошибка на стороне сервера",
-    }
-    return render_template("coffee_site/404.html", context=context), 505
+    context = {"title": "Ошибка на стороне сервера"}
+    return render_template("coffee_site/500.html", context=context), 500
 
 
 if __name__ == "__main__":
