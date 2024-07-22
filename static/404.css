@@ -1,15 +1,8 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #1E1E1E;
-}
-
-.picture {
+.pictu {
     position: relative;
     top: 0;
     left: inherit;
-    width: 1550px;
-    height: 1080px;
+    height: 700px;
 
     background-image: url('/images/MainPicture.png');
 }
@@ -24,7 +17,7 @@ html, body {
 
 .bp_text {
     position: relative;
-    top: 200px;
+    top: 0px;
     padding: 250px;
     margin: 0;
 
